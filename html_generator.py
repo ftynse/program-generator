@@ -228,6 +228,23 @@ class HTMLGenerator(object):
                        'Programming Models and Languages for Distributed Computing': 'td-pmldc',
                        'Catering': 'td-catering'}
 
+        css_cl_dict = {'Research Papers': 'td-pldi',
+                 'Invited Speakers': 'td-keynotes',
+                 'Research Artifacts': 'td-artifacts',
+		 'Student Research Competition (SRC)': 'td-src',
+		 'Tutorials': 'td-tutorials',
+		 'ISMM 2017': 'td-ismm',
+		 'LCTES 2017': 'td-lctes',
+		 '- The 18th Annual ACM SIGPLAN / SIGBED Conference on Languages, Compilers, and Tools for Embedded Systems': 'td-lctes',
+		 'ARRAY 2017': 'td-array',
+		 'DSW 2017': 'td-dsw',
+		 'Deep Specifications in the Wild 2017': 'td-dsw',
+		 'IC 2017': 'td-ic',
+		 'MAPL 2017': 'td-mapl',
+		 'PLMW 2017': 'td-plmw',
+		 'SOAP 2017': 'td-soap',
+		 'WCIRE 2017': 'td-wcire'}
+
         session_counter = {}
 
         days = sorted(self.conference.conference_days.keys())
@@ -247,6 +264,23 @@ class HTMLGenerator(object):
                      'Programming Models and Languages for Distributed Computing': 9, 'STOP': 12, 'PX': 10,
                      'ICOOOLPS': 5, 'VORTEX': 14, 'IWACO': 6, 'LIVE': 8, 'Summer School': 13, 'JSTools': 7,
                      'FTfJP': -1, 'Doctoral Symposium': 2, 'GRACE': 4}
+
+        score = {'Research Papers': 0,
+                 'Invited Speakers': -10,
+                 'Research Artifacts': 10,
+		 'Student Research Competition (SRC)': 20,
+		 'Tutorials': 30,
+		 'ISMM 2017': 40,
+		 'LCTES 2017': 50,
+		 '- The 18th Annual ACM SIGPLAN / SIGBED Conference on Languages, Compilers, and Tools for Embedded Systems': 51,
+		 'ARRAY 2017': 60,
+		 'DSW 2017': 70,
+		 'Deep Specifications in the Wild 2017': 71,
+		 'IC 2017': 80,
+		 'MAPL 2017': 90,
+		 'PLMW 2017': 100,
+		 'SOAP 2017': 110,
+		 'WCIRE 2017': 120}
 
         tracks = conference_day.tracks
         tracks = sorted(tracks, key=lambda track: score[track.name])
