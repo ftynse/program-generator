@@ -403,10 +403,10 @@ class Slot(object):
 
     def __repr__(self):
         s = str(self.start) + " - " + str(self.end) \
-            + ": " + unicode(self.name).encode('ascii', 'xmlcharrefreplace') + " -"
+            + ": " + unicode(self.name).encode('utf-8', 'xmlcharrefreplace') + " -"
 
         for p in self.speakers:
-            s += " " + unicode(p.last_name).encode('ascii', 'xmlcharrefreplace')
+            s += " " + unicode(p.last_name).encode('utf-8', 'xmlcharrefreplace')
 
         return s
 

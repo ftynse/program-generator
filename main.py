@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from parser import XMLParser
 from html_generator import HTMLGenerator
 

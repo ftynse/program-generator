@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from conference import Conference
 from conference import Session
 from conference import Track

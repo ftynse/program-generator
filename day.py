@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import time
 import calendar
 from abstract_time import AbstractTime

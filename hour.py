@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from abstract_time import AbstractTime
 
 class Hour(AbstractTime):
